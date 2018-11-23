@@ -1,0 +1,27 @@
+<meta charset="utf8">
+<form onsubmit="return check()">
+    NAME : <input type='text' name='user_name'><br>
+    NICKNAME : <input type='text' name='user_nick_name'><br>
+    <input type='submit' value='OK'>
+</form>
+
+<script>
+ function check() {
+     var userName = document.forms[0].user_name.value;
+     var userNickName = document.forms[0].user_nick_name.value;
+     var $userNickName = document.forms[0].user_nick_name
+
+
+     if(userName == '') {
+        alert('NAME을 입력해주세요.')
+        return false
+     }
+     if(userNickName == '') {
+        document.forms[0].user_nick_name.value = userName
+        $userNickName = userName // (O)
+        userNickName = userName // (X)
+        return false
+     }
+
+ }
+</script>

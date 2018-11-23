@@ -1,0 +1,19 @@
+<script>
+    // count = 5  // 전역변수
+
+    function outer() {
+        count = 5
+        return function() {
+            count -= 1
+            console.log(count)
+            if(count < 0) {
+                self.close()
+            }
+        }
+    }
+
+    out = outer()
+    out()
+    out()
+    out()
+</script>

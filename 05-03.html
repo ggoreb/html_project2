@@ -1,0 +1,14 @@
+<script>
+count1 = 5;  // 누구나 접근가능, 전역변수 라서..
+function func1() {
+    var count2 = 5;
+    return count2;
+}
+function func2() {
+    var count2 = 5;
+    return function() {
+        return --count2
+    }
+}
+
+</script>

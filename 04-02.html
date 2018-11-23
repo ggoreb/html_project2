@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+
+<script>
+//           0.0 <= N < 1.0
+    random = Math.random() * 10 + 1
+    random = parseInt(random)
+    document.write(random)
+
+    isContinue = true
+
+    while(isContinue) {
+        // 문자열로 입력
+        user = prompt('숫자 입력')
+        user = parseInt(user)
+        if(random == user) {
+            isContinue = false
+            alert('correct')
+        }
+    }
+</script>
+
+
+
+
+
+
